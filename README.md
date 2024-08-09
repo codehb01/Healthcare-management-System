@@ -1,1 +1,3 @@
 # Healthcare-management-System
+
+Our healthcare management system project aims to address the challenges faced in efficiently managing patient data, streamlining administrative processes, and improving overall healthcare delivery. The Healthcare Management System is designed to manage patient information, appointments, billing, statistical reports, system controls, and database management in a healthcare setting.
