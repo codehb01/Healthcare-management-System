@@ -1,5 +1,5 @@
 # Healthcare-management-System
-# **Healthcare Management System (HMS)**
+# **HealthFlow**
 
 The **Healthcare Management System (HMS)** is a modern desktop application designed to optimize and simplify the operations of healthcare facilities. It provides an all-in-one solution for managing critical tasks such as **patient registration**, **appointment scheduling**, **billing**, and **report generation**, making it an essential tool for small to mid-sized healthcare institutions.
 
