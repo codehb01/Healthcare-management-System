@@ -68,7 +68,7 @@ By integrating these advanced features, HMS enhances healthcare operations, impr
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/yourusername/healthcare-management-system.git
+   git clone https://github.com/codehb01/Healthcare-management-System.git
    ```
 2. **Setup Database**:
    - Import the provided SQL scripts to create necessary tables.
