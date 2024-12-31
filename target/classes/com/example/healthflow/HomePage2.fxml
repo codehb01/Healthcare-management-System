@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.chart.StackedBarChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.healthflow.HomeController">
+   <AnchorPane fx:id="ankrDashboard" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" stylesheets="@style5.css" AnchorPane.bottomAnchor="6.0" AnchorPane.topAnchor="10.0">
+      <ImageView fx:id="imgvRefresh" fitHeight="54.0" fitWidth="54.0" layoutX="287.0" layoutY="36.0" onMouseClicked="#refreshPage" pickOnBounds="true" preserveRatio="true" styleClass="button" AnchorPane.leftAnchor="287.0" AnchorPane.topAnchor="36.0">
+         <image>
+            <Image url="@rotate-right_7883922.png" />
+         </image>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.06666667014360428" green="0.1764705926179886" blue="0.30588236451148987" opacity="0.699999988079071" />
+               </color>
+            </DropShadow>
+         </effect>
+      </ImageView>
+   </AnchorPane>
+   <AnchorPane layoutX="385.0" layoutY="42.0" minHeight="-Infinity" prefHeight="61.0" prefWidth="198.0" style="-fx-background-color: #DBE2EF; -fx-background-radius: 40; -fx-border-color: #000000; -fx-border-radius: 35; -fx-border-width: 1.5;">
+      <Label fx:id="lblHome" alignment="CENTER" contentDisplay="CENTER" layoutX="38.0" layoutY="5.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="128.0" text="Home" textAlignment="CENTER">
+         <font>
+            <Font name="Book Antiqua Bold" size="36.0" />
+         </font>
+      </Label>
+   </AnchorPane>
+   <AnchorPane fx:id="ankrRecords1" layoutX="351.0" layoutY="152.0" prefHeight="82.0" prefWidth="198.0" style="-fx-background-color: #DBE2EF; -fx-background-radius: 30; -fx-border-color: #3F72AF; -fx-border-radius: 30; -fx-border-width: 3;">
+      <Label fx:id="lblTotalPatient" alignment="CENTER" contentDisplay="CENTER" layoutX="20.0" layoutY="25.0" prefHeight="32.0" prefWidth="128.0" text="Total patients" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblNoOfTotalPatients" alignment="CENTER" contentDisplay="CENTER" layoutX="16.0" layoutY="3.0" prefHeight="32.0" prefWidth="128.0" text="0" AnchorPane.bottomAnchor="27.333333333333336" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font name="System Bold" size="34.0" />
+         </font>
+      </Label>
+   </AnchorPane>
+   <AnchorPane fx:id="ankrRecords2" layoutX="604.0" layoutY="151.0" prefHeight="82.0" prefWidth="198.0" style="-fx-background-color: #DBE2EF; -fx-background-radius: 30; -fx-border-color: #3F72AF; -fx-border-radius: 30; -fx-border-width: 3;">
+      <Label fx:id="lblTotalDoctors" alignment="CENTER" contentDisplay="CENTER" layoutX="42.0" layoutY="37.0" prefHeight="32.0" prefWidth="128.0" text="Total Doctors " AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTotalnoDoctors" alignment="CENTER" contentDisplay="CENTER" layoutX="27.0" layoutY="19.0" prefHeight="32.0" prefWidth="128.0" text="0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font name="System Bold" size="34.0" />
+         </font>
+      </Label>
+   </AnchorPane>
+   <AnchorPane fx:id="ankrRecords3" layoutX="857.0" layoutY="150.0" prefHeight="82.0" prefWidth="198.0" style="-fx-background-color: #DBE2EF; -fx-background-radius: 30; -fx-border-color: #3F72AF; -fx-border-radius: 30; -fx-border-width: 3;">
+      <Label fx:id="lblTotalStaff" alignment="CENTER" contentDisplay="CENTER" layoutX="32.0" layoutY="41.0" prefHeight="32.0" prefWidth="128.0" text="Total Staff" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTotalnoStaff" alignment="CENTER" contentDisplay="CENTER" layoutX="54.0" layoutY="18.0" prefHeight="32.0" prefWidth="128.0" text="0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font name="System Bold" size="34.0" />
+         </font>
+      </Label>
+   </AnchorPane>
+   <AnchorPane fx:id="ankrPiechart" layoutX="281.0" layoutY="279.0" prefHeight="432.0" prefWidth="406.0" style="-fx-background-color: #DBE2EF; -fx-background-radius: 40; -fx-border-color: #000000; -fx-border-radius: 35; -fx-border-width: 0.8;" AnchorPane.bottomAnchor="89.0" AnchorPane.topAnchor="278.66666666666663">
+      <PieChart fx:id="pieChart" layoutX="15.200000000000001" layoutY="15.200000000000001" prefHeight="429.0" prefWidth="379.0" title="Age Group Distribution" AnchorPane.bottomAnchor="17.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0" />
+      <Label layoutX="80.0" layoutY="408.0" text=" (Pediatric)" AnchorPane.bottomAnchor="6.666666666666686">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font></Label>
+      <Label layoutX="146.0" layoutY="407.0" prefHeight="18.0" prefWidth="80.0" text="(Adolescents)" AnchorPane.bottomAnchor="7.0">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font></Label>
+      <Label layoutX="226.0" layoutY="408.0" text="(Adult)" AnchorPane.bottomAnchor="6.666666666666686">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font></Label>
+      <Label layoutX="267.0" layoutY="408.0" text="(Seniors)" AnchorPane.bottomAnchor="6.666666666666686">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font></Label>
+   </AnchorPane>
+   <AnchorPane fx:id="ankrBarGraph" layoutX="722.0" layoutY="278.0" prefHeight="462.0" prefWidth="448.0" style="-fx-background-color: #DBE2EF; -fx-background-radius: 40; -fx-border-color: #000000; -fx-border-radius: 35; -fx-border-width: 0.8;" AnchorPane.bottomAnchor="89.0" AnchorPane.topAnchor="278.6666666666667">
+      <StackedBarChart fx:id="barGraph" layoutX="24.0" layoutY="19.0" minWidth="-Infinity" prefHeight="426.0" prefWidth="407.0" title="Blood Group Distribution" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <xAxis>
+            <CategoryAxis side="BOTTOM" />
+         </xAxis>
+         <yAxis>
+            <NumberAxis side="LEFT" />
+         </yAxis>
+      </StackedBarChart>
+   </AnchorPane>
+   <VBox layoutY="6.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="778.0" prefWidth="242.0" style="-fx-background-color: #3F72AF; -fx-background-radius: 40;" styleClass="vbox" stylesheets="@style5.css" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+      <Label alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="10.0" layoutY="10.0" prefHeight="66.0" prefWidth="254.0" text="HealthFlow" textAlignment="CENTER" textFill="#dbe2ef">
+         <font>
+            <Font name="Calibri Bold" size="36.0" />
+         </font>
+         <effect>
+            <Bloom />
+         </effect>
+         <VBox.margin>
+            <Insets left="20.0" right="20.0" top="20.0" />
+         </VBox.margin>
+      </Label>
+      <Button fx:id="btnHome" alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="200.0" style="-fx-background-radius: 40; -fx-background-color: #112D4E; -fx-border-color: #5B99C2; -fx-border-radius: 40; -fx-border-width: 3;" stylesheets="@style5.css" text="Home" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Calibri Bold" size="20.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+         <VBox.margin>
+            <Insets bottom="10.0" left="20.0" right="20.0" top="30.0" />
+         </VBox.margin>
+         <graphic>
+            <ImageView fitHeight="35.0" fitWidth="35.0" opacity="0.7" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@output-onlinegiftools(3).gif" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <MenuButton fx:id="mnuBtnRegistration" alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: #112D4E; -fx-background-radius: 40;" styleClass="menubutton" stylesheets="@style5.css" text="Registration" textAlignment="CENTER" textFill="WHITE">
+         <items>
+            <MenuItem fx:id="PatientTab" mnemonicParsing="false" onAction="#handlePatientTabClick">
+               <graphic>
+                  <Label style="-fx-pref-width: 180; -fx-alignment: CENTER; -fx-background-color: #112D4E; -fx-text-fill: #FFFFFF; -fx-background-radius: 20" text="Patient">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Label>
+               </graphic>
+            </MenuItem>
+            <MenuItem fx:id="DoctorTab" mnemonicParsing="false" onAction="#handleDoctorTabClick">
+               <graphic>
+                  <Label style="-fx-pref-width: 180; -fx-alignment: CENTER; -fx-background-color: #112D4E; -fx-text-fill: #FFFFFF; -fx-background-radius: 20" text="Doctor">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Label>
+               </graphic>
+            </MenuItem>
+            <MenuItem fx:id="StaffTab" mnemonicParsing="false" onAction="#handleStaffTabClick">
+               <graphic>
+                  <Label style="-fx-pref-width: 180; -fx-alignment: CENTER; -fx-background-color: #112D4E; -fx-text-fill: #FFFFFF; -fx-background-radius: 20" text="Staff">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Label>
+               </graphic>
+            </MenuItem>
+         </items>
+         <font>
+            <Font name="Calibri Bold" size="20.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+         <VBox.margin>
+            <Insets bottom="10.0" left="20.0" right="20.0" top="20.0" />
+         </VBox.margin>
+         <padding>
+            <Insets left="-1.0" />
+         </padding>
+         <graphic>
+            <ImageView fitHeight="35.0" fitWidth="35.0" opacity="0.7" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@questionnaire-12134192-unscreen.gif" />
+               </image>
+            </ImageView>
+         </graphic>
+      </MenuButton>
+      <Button fx:id="btnAppointment" alignment="CENTER" mnemonicParsing="false" onAction="#handleAppointmentButtonClick" prefHeight="60.0" prefWidth="246.0" style="-fx-background-radius: 40; -fx-background-color: #112D4E;" stylesheets="@style5.css" text="Appointment" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Calibri Bold" size="20.0" />
+         </font>
+         <effect>
+            <InnerShadow>
+               <color>
+                  <Color opacity="0.8223350048065186" />
+               </color>
+            </InnerShadow>
+         </effect>
+         <VBox.margin>
+            <Insets bottom="10.0" left="20.0" right="20.0" top="20.0" />
+         </VBox.margin>
+         <graphic>
+            <ImageView fitHeight="35.0" fitWidth="35.0" opacity="0.7" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@calendar-15591464-unscreen.gif" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btnBilling" alignment="CENTER" mnemonicParsing="false" onAction="#handleBillingButtonClick" prefHeight="60.0" prefWidth="244.0" style="-fx-background-radius: 40; -fx-background-color: #112D4E;" stylesheets="@style5.css" text="Billing / Invoice" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Calibri Bold" size="20.0" />
+         </font>
+         <effect>
+            <InnerShadow>
+               <color>
+                  <Color opacity="0.8223350048065186" />
+               </color>
+            </InnerShadow>
+         </effect>
+         <VBox.margin>
+            <Insets bottom="10.0" left="20.0" right="20.0" top="20.0" />
+         </VBox.margin>
+         <graphic>
+            <ImageView fitHeight="35.0" fitWidth="35.0" opacity="0.7" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@salary-16768522-unscreen.gif" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btnClinicalManagement" alignment="CENTER" mnemonicParsing="false" onAction="#handleClinicalManagementTabClick" prefHeight="60.0" prefWidth="240.0" style="-fx-background-radius: 40; -fx-background-color: #112D4E;" stylesheets="@style5.css" text="Clinical Management" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Calibri Bold" size="20.0" />
+         </font>
+         <effect>
+            <InnerShadow>
+               <color>
+                  <Color opacity="0.8223350048065186" />
+               </color>
+            </InnerShadow>
+         </effect>
+         <VBox.margin>
+            <Insets bottom="70.0" left="20.0" right="20.0" top="20.0" />
+         </VBox.margin>
+         <graphic>
+            <ImageView fitHeight="35.0" fitWidth="35.0" opacity="0.7" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@applications-17122749-unscreen.gif" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <VBox fx:id="vbxUser" alignment="BOTTOM_CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="154.0" prefWidth="202.0" style="-fx-background-color: #5B99C2; -fx-background-radius: 40;">
+         <padding>
+            <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+         </padding>
+         <effect>
+            <InnerShadow />
+         </effect>
+         <Button fx:id="btnprofile" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleProfileButtonClick" prefHeight="42.0" prefWidth="105.0" style="-fx-background-color: #5B99C2; -fx-background-radius: 40; -fx-border-color: #1A4870; -fx-border-radius: 40; -fx-border-width: 3;" stylesheets="@style5.css" text="Profile">
+            <VBox.margin>
+               <Insets bottom="-46.0" left="65.0" top="10.0" />
+            </VBox.margin>
+            <font>
+               <Font name="Calibri" size="24.0" />
+            </font>
+            <padding>
+               <Insets top="-1.0" />
+            </padding>
+            <effect>
+               <DropShadow>
+                  <color>
+                     <Color red="0.10320000350475311" green="0.28294000029563904" blue="0.4300000071525574" opacity="0.699999988079071" />
+                  </color>
+               </DropShadow>
+            </effect>
+         </Button>
+         <ImageView fx:id="imgvUser" accessibleRole="BUTTON" fitHeight="52.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+            <VBox.margin>
+               <Insets bottom="28.0" right="115.0" />
+            </VBox.margin>
+            <effect>
+               <DropShadow>
+                  <color>
+                     <Color red="1.0" green="1.0" blue="1.0" opacity="0.5" />
+                  </color>
+               </DropShadow>
+            </effect>
+            <Image url="@man_4825038.png" />
+         </ImageView>
+         <Button fx:id="btnUser" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleUserButtonClick" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #9A0000; -fx-background-radius: 40;" stylesheets="@style5.css" text="Logout" textFill="WHITE">
+            <VBox.margin>
+               <Insets bottom="-30.0" top="-10.0" />
+            </VBox.margin>
+            <font>
+               <Font name="Calibri" size="24.0" />
+            </font>
+<!--            <stylesheets>-->
+<!--               <URL value="@styles.css" />-->
+<!--            </stylesheets>-->
+            <Label fx:id="footerLabel" text="Default Footer Text" />
+
+
+            <padding>
+               <Insets top="-3.0" />
+            </padding>
+            <effect>
+               <DropShadow>
+                  <color>
+                     <Color red="1.0" opacity="0.5" />
+                  </color>
+               </DropShadow>
+            </effect>
+         </Button>
+         <VBox.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" />
+         </VBox.margin>
+      </VBox>
+   </VBox>
+</AnchorPane>

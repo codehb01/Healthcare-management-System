@@ -1,0 +1,67 @@
+/* Default button and menubutton styling */
+.button, .menubutton {
+    -fx-background-color: #04386a;
+    -fx-text-fill: #ffe5e5;
+    -fx-font-size: 20px;
+    -fx-padding: 5px 20px;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-overflow: hidden; /* Ensures the ripple stays within the button */
+    -fx-effect: dropshadow(gaussian, #094c66, 4, 0, 4, 4); /* Box shadow */
+    -fx-transition: transform 200ms, -fx-effect 200ms; /* Transition for hover */
+}
+
+/* Ensure the text fill for menubutton is white */
+.menubutton > .label {
+    -fx-text-fill: #ffe5e5;  /* Force white text color for MenuButton */
+}
+
+/* Hover effect for buttons and MenuButtons */
+.button:hover, .menubutton:hover {
+    -fx-background-color: #04386a;
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, #094c66, 6, 0, 2, 2); /* Slightly bigger shadow on hover */
+}
+
+/* Button and MenuButton pressed effect (similar to active state) */
+.button:pressed, .menubutton:pressed {
+    -fx-translate-x: 4px;
+    -fx-translate-y: 4px;
+    -fx-effect: dropshadow(gaussian, #094c66, 0, 0, 0, 0); /* Shadow disappears on press */
+}
+
+/* Specific button hover styles */
+#btnHome:hover, #btnAppointment:hover, #btnBilling:hover,
+#btnClinicalManagement:hover, #btnUser:hover,
+#menuHome:hover, #menuAppointment:hover, #menuBilling:hover,
+#menuClinicalManagement:hover, #menuUser:hover, #StaffTab:hover,
+#DoctorTab:hover, #PatientTab:hover {
+    /*-fx-background-color: #3e8e41;  !* Change background color on hover *!*/
+    -fx-scale-x: 1.05;              /* Slightly increase the button size */
+    -fx-scale-y: 1.05;
+    -fx-text-fill: #ffe5e5; /* Change text color on hover */
+}
+
+/* Optional: Button and MenuButton hover animation */
+.button, .menubutton {
+    -fx-transition: all 0.2s ease-in-out;
+}
+
+/* Ripple effect container */
+.ripple {
+    -fx-background-radius: 50%;
+    -fx-background-color: rgba(255, 255, 255, 0.5);
+    -fx-opacity: 0;
+    -fx-scale-x: 0;
+    -fx-scale-y: 0;
+    -fx-transition: -fx-scale-x 0.4s, -fx-scale-y 0.4s, -fx-opacity 0.4s;
+}
+
+/* Ripple active (expanding) */
+.button:pressed .ripple, .menubutton:pressed .ripple {
+    -fx-opacity: 1;
+    -fx-scale-x: 20;
+    -fx-scale-y: 20;
+}

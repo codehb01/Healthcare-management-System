@@ -1,0 +1,62 @@
+/* General Button Styles */
+.button {
+    -fx-background-radius: 20;
+    -fx-background-color: #112D4E;
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+    -fx-font-family: 'Calibri Bold';
+    -fx-font-size: 10px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.7), 4, 0, 2, 2);
+    -fx-border-color: transparent;
+    -fx-border-width: 2;
+    -fx-transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect with scaling and glow */
+.button:hover {
+    -fx-background-color: #3F72AF;
+    -fx-effect: innershadow(gaussian, rgba(255,255,255,0.5), 5, 0, 0, 0), glow(#FFFFFF, 0.5);
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-border-color: white;
+}
+
+/* Menu Button Styles */
+.menu-button {
+    -fx-background-color: #112D4E;
+    -fx-background-radius: 20;
+    -fx-border-color: #5B99C2;
+    -fx-border-radius: 20;
+    -fx-text-fill: white;
+    -fx-font-family: 'Calibri Bold';
+    -fx-font-size: 11px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.7), 4, 0, 2, 2);
+    -fx-transition: all 0.3s ease-in-out;
+}
+
+.menu-button:hover {
+    -fx-background-color: #3F72AF;
+    -fx-effect: glow(#FFFFFF, 0.5);
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-border-color: white;
+}
+
+/* Label Styles */
+.label {
+    -fx-font-family: 'Calibri Bold';
+    -fx-text-fill: #DBE2EF;
+    -fx-underline: true;
+}
+
+.label:hover {
+    -fx-effect: bloom;
+}
+
+/* VBox for user section */
+.vbox-user {
+    -fx-background-color: #5B99C2;
+    -fx-background-radius: 20;
+    -fx-alignment: center;
+    -fx-padding: 10px;
+}

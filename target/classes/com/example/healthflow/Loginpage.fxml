@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #2481cd;" styleClass="anchor-pane" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.healthflow.Logincontroller">
+    <Label fx:id="lblError" layoutX="50" layoutY="180" textFill="red" visible="false" />
+    <AnchorPane layoutX="518.0" layoutY="-3.0" prefHeight="898.0" prefWidth="690.0" style="-fx-background-radius: 40;" styleClass="form-pane" stylesheets="@Styles1.css" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="550.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="100.0">
+        <children>
+         <AnchorPane layoutX="198.0" layoutY="15.0" prefHeight="153.0" prefWidth="153.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 20;" AnchorPane.rightAnchor="190.0" />
+
+            <!-- Username Field -->
+            <TextField fx:id="tfuser" alignment="CENTER" layoutX="143.0" layoutY="256.0" prefHeight="50.0" prefWidth="300.0" promptText="Username" style="-fx-background-radius: 40;" styleClass="text-field-shadow" AnchorPane.topAnchor="256.0" />
+
+            <!-- Password Field -->
+            <PasswordField fx:id="tfpass" alignment="CENTER" layoutX="143.0" layoutY="330.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="300.0" promptText="Password" style="-fx-background-radius: 40;" styleClass="text-field-shadow" AnchorPane.bottomAnchor="210.0" AnchorPane.leftAnchor="132.66666666666669" AnchorPane.rightAnchor="107.0" AnchorPane.topAnchor="330.0" />
+
+            <!-- Login Button -->
+            <Button fx:id="btnlog" layoutX="175.0" layoutY="468.0" onAction="#handleLogin" prefHeight="50.0" prefWidth="200.0" style="-fx-background-radius: 20;" styleClass="login-button" text="Login">
+            <font>
+               <Font name="System Bold" size="36.0" />
+            </font></Button>
+         <CheckBox fx:id="CBoxShowPass" layoutX="316.0" layoutY="415.0" mnemonicParsing="false" onAction="#togglePasswordVisibility" text="Show Password">
+            <font>
+               <Font size="18.0" />
+            </font></CheckBox>
+         <Hyperlink fx:id="HypLinkForgPass" layoutX="202.0" layoutY="540.0" onAction="#handleForgotPassword" text="Forgot Password">
+            <font>
+               <Font name="Book Antiqua" size="18.0" />
+            </font></Hyperlink>
+         <TextField fx:id="tfpassVisible" alignment="CENTER" layoutX="70.0" layoutY="200.0" managed="false" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="300.0" promptText="First enter password to see it!" style="-fx-background-radius: 40;" styleClass="text-field-shadow" visible="false" AnchorPane.bottomAnchor="210.0" AnchorPane.leftAnchor="132.66" AnchorPane.rightAnchor="107.0" AnchorPane.topAnchor="330.0" />
+         <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="61.0" layoutY="261.0" pickOnBounds="true" preserveRatio="true" styleClass="text-field-shadow">
+            <image>
+               <Image url="@user.png" />
+            </image>
+         </ImageView>
+         <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="61.0" layoutY="335.0" pickOnBounds="true" preserveRatio="true" styleClass="text-field-shadow">
+            <image>
+               <Image url="@padlock.png" />
+            </image>
+         </ImageView>
+         <Label alignment="CENTER" contentDisplay="CENTER" layoutX="143.0" layoutY="172.0" prefHeight="74.0" prefWidth="300.0" text="HealthFlow" wrapText="true">
+            <font>
+               <Font name="Book Antiqua Bold" size="48.0" />
+            </font>
+            <effect>
+               <InnerShadow>
+                  <color>
+                     <Color red="0.07450725883245468" green="0.4234495759010315" blue="0.5614035129547119" />
+                  </color>
+               </InnerShadow>
+            </effect>
+         </Label>
+         <ImageView fitHeight="133.0" fitWidth="150.0" layoutX="208.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@health-report_14705088.gif" />
+            </image>
+         </ImageView>
+        </children>
+    </AnchorPane>
+   <ImageView fitHeight="492.0" fitWidth="416.0" layoutX="-5.0" layoutY="-14.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@Screenshot 2024-09-20 232455.png" />
+      </image>
+      <effect>
+         <Reflection />
+      </effect>
+   </ImageView>
+   <ImageView fitHeight="155.0" fitWidth="167.0" layoutX="1027.0" layoutY="613.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@1stethoscope_7602939.png" />
+      </image>
+      <effect>
+         <DropShadow />
+      </effect>
+   </ImageView>
+   <AnchorPane layoutX="334.0" layoutY="51.0" prefHeight="163.0" prefWidth="133.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 20;">
+      <children>
+         <ImageView fitHeight="125.0" fitWidth="123.0" layoutX="7.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@medicine_13099855.gif" />
+            </image>
+         </ImageView>
+      </children>
+   </AnchorPane>
+   <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="472.0" layoutY="589.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@1medical-report_9597321.png" />
+      </image>
+      <effect>
+         <DropShadow />
+      </effect>
+   </ImageView>
+   <ImageView fitHeight="287.0" fitWidth="269.0" layoutX="30.0" layoutY="566.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="-15.0" AnchorPane.leftAnchor="0.0">
+      <image>
+         <Image url="@1blood-donation_9750626.png" />
+      </image>
+      <effect>
+         <DropShadow />
+      </effect>
+   </ImageView>
+</AnchorPane>

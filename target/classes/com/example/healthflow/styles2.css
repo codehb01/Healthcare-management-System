@@ -1,0 +1,77 @@
+/* General styling for the AnchorPane background */
+.anchor-pane {
+    -fx-background-color: linear-gradient(to bottom, #dbe2ef, #3f72af);
+}
+
+/* Styling for the header label */
+.label-header {
+    -fx-font-family: 'Book Antiqua Bold';
+    -fx-font-size: 24px;
+    -fx-text-fill: #0f4c75;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 5, 0, 0, 1);
+}
+
+/* Styling for regular labels */
+.label {
+    -fx-font-family: 'Calibri';
+    -fx-font-size: 14px;
+    -fx-text-fill: #112d4e;
+}
+
+/* Styling for emphasized (bold/underline) labels */
+.label-emphasis {
+    -fx-font-family: 'Calibri Bold';
+    -fx-font-size: 15px;
+    -fx-text-fill: #112d4e;
+    -fx-underline: true;
+}
+
+/* Styling for the security question and answer text field */
+.text-field, .password-field {
+    -fx-background-color: #f9f7f7;
+    -fx-background-radius: 10;
+    -fx-border-color: #3f72af;
+    -fx-border-radius: 10;
+    -fx-padding: 5px;
+    -fx-font-family: 'Calibri';
+    -fx-font-size: 12px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0, 0, 1);
+}
+
+/* Styling for buttons */
+.button {
+    -fx-background-color: #112d4e;
+    -fx-background-radius: 20;
+    -fx-font-family: 'Book Antiqua';
+    -fx-font-size: 12px;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 5, 0, 0, 1);
+}
+
+.button:hover {
+    -fx-background-color: #3f72af;
+}
+
+/* Styling for the back button */
+.button-back {
+    -fx-background-color: #dbf3fa;
+    -fx-text-fill: #0b2953;
+    -fx-background-radius: 20;
+    -fx-font-family: 'Gill Sans Ultra Bold';
+}
+
+.button-back:hover {
+    -fx-background-color: #f6f5f5;
+    -fx-text-fill: #112d4e;
+}
+
+/* Styling for instructional label */
+.instruction-label {
+    -fx-font-family: 'Book Antiqua Bold Italic';
+    -fx-font-size: 14px;
+    -fx-text-fill: #0b2953;
+    -fx-background-color: rgba(255, 255, 255, 0.7);
+    -fx-background-radius: 20;
+    -fx-padding: 10px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 5, 0, 0, 1);
+}

@@ -1,0 +1,44 @@
+/* Styling the root AnchorPane */
+.anchor-pane {
+    -fx-background-color: linear-gradient(to right, #eaf2f8, #d4e6f1);
+}
+
+/* Styling the form AnchorPane */
+.form-pane {
+    -fx-background-color: #aed6f1;
+    -fx-background-radius: 15;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 15, 0, 0, 3);
+    -fx-padding: 10px;
+}
+
+/* Adding shadow effect to text fields */
+.text-field-shadow {
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-padding: 5;
+    -fx-font-size: 14px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 8, 0, 0, 3);
+}
+
+/* Styling the login button */
+.login-button {
+    -fx-background-color: #2874a6;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 10, 0, 0, 3);
+    -fx-cursor: hand;
+}
+
+/* Button hover effect */
+.login-button:hover {
+    -fx-background-color: #1f618d;
+}
+
+/* Button click effect */
+.login-button:pressed {
+    -fx-background-color: #1c4e75;
+    -fx-scale-x: 0.98;
+    -fx-scale-y: 0.98;
+}
